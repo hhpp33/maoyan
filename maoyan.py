@@ -2,8 +2,12 @@
 import requests
 import re
 import os
+import sys
 from fontTools.ttLib import TTFont
 
+if sys.getdefaultencoding() != 'gbk': 
+ reload(sys) 
+sys.setdefaultencoding('gbk')
 
 class MaoYan(object):
     def __init__(self):
