@@ -61,10 +61,10 @@ class MaoYan(object):
         star = self.modify_data(star[0])
 
         # 正则匹配评论的人数
-        people = re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)
-        print(people)
-        people = ''.join(people[0])
-        people = self.modify_data(people)
+        #people = re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)
+        #print(people)
+        #people = ''.join(people[0])
+        #people = self.modify_data(people)
 
         # 正则匹配累计票房
         ticket_number = re.findall(r'''<span class="stonefont">(.*?)</span><span class="unit">(亿)</span>''', html)
@@ -72,7 +72,7 @@ class MaoYan(object):
         ticket_number = self.modify_data(ticket_number)
 
         print('用户评分: %s 星' % star[0])
-        print('评分人数: %s' % people)
+        #print('评分人数: %s' % people)
         print('累计票房: %s' % ticket_number)
 
 
