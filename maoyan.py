@@ -54,7 +54,6 @@ class MaoYan(object):
       
         # 正则匹配字体文件
         font_file = re.findall(r'vfile\.meituan\.net\/colorstone\/(\w+\.woff)', html)
-        print(font_file[0])
         self.create_font(font_file[0])
 
         # 正则匹配星级
@@ -63,7 +62,7 @@ class MaoYan(object):
 
         # 正则匹配评论的人数
         people = re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)
-        print(people[0])
+        print(people)
         people = ''.join(people[0])
         people = self.modify_data(people)
 
