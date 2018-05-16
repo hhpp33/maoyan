@@ -54,7 +54,7 @@ class MaoYan(object):
       
         # 正则匹配字体文件
         font_file = re.findall(r'vfile\.meituan\.net\/colorstone\/(\w+\.woff)', html)
-        print(font_file)
+        print(font_file[0])
         self.create_font(font_file)
 
         # 正则匹配星级
