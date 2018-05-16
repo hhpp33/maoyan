@@ -58,18 +58,20 @@ class MaoYan(object):
         self.create_font(font_file[0])
 
         # 正则匹配星级
-        star = re.findall(r'<span class="index-left info-num ">\s+<span class="stonefont">(.*?)</span>\s+</span>', html)[0]
-        star = self.modify_data(star)
+        star = re.findall(r'<span class="index-left info-num ">\s+<span class="stonefont">(.*?)</span>\s+</span>', html)
+        star = self.modify_data(star[0])
 
         # 正则匹配评论的人数
-        people = ''.join(re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)[0])
+        people = re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)
+        people = ''.join(people[0])
         people = self.modify_data(people)
 
         # 正则匹配累计票房
-        ticket_number = ''.join(re.findall(r'''<span class="stonefont">(.*?)</span><span class="unit">(亿)</span>''', html)[0])
+        ticket_number = re.findall(r'''<span class="stonefont">(.*?)</span><span class="unit">(亿)</span>''', html)
+        ticket_number = ''.join(ticket_number[0])
         ticket_number = self.modify_data(ticket_number)
 
-        print('用户评分: %s 星' % star)
+        print('用户评分: %s 星' % star[0])
         print('评分人数: %s' % people)
         print('累计票房: %s' % ticket_number)
 
