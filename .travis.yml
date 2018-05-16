@@ -1,2 +1,3 @@
 language: python
+install: pip install requests fonttools
 script: python maoyan.py
