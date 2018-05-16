@@ -63,6 +63,7 @@ class MaoYan(object):
 
         # 正则匹配评论的人数
         people = re.findall(r'''<span class='score-num'><span class="stonefont">(.*?万)</span>(人评分)</span>''', html)
+        print(people[0])
         people = ''.join(people[0])
         people = self.modify_data(people)
 
