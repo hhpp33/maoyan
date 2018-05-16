@@ -7,7 +7,7 @@ from fontTools.ttLib import TTFont
 
 class MaoYan(object):
     def __init__(self):
-        self.url = 'http://maoyan.com/films/1198214'
+        self.url = 'http://maoyan.com/films/1208942'
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
         }
