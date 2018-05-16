@@ -51,7 +51,7 @@ class MaoYan(object):
 
     def start_crawl(self):
         html = self.get_html(self.url).decode('utf-8')
-       
+      
         # 正则匹配字体文件
         font_file = re.findall(r'vfile\.meituan\.net\/colorstone\/(\w+\.woff)', html)
         print(font_file)
