@@ -67,13 +67,13 @@ class MaoYan(object):
         #people = self.modify_data(people)
 
         # 正则匹配累计票房
-        ticket_number = re.findall(r'''<span class="stonefont">(.*?)</span><span class="unit">(亿)</span>''', html)
-        ticket_number = ''.join(ticket_number[0])
-        ticket_number = self.modify_data(ticket_number)
+        #ticket_number = re.findall(r'''<span class="stonefont">(.*?)</span><span class="unit">(亿)</span>''', html)
+        #ticket_number = ''.join(ticket_number[0])
+        #ticket_number = self.modify_data(ticket_number)
 
         print('用户评分: %s 星' % star[0])
         #print('评分人数: %s' % people)
-        print('累计票房: %s' % ticket_number)
+        #print('累计票房: %s' % ticket_number)
 
 
 if __name__ == '__main__':
