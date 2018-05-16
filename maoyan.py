@@ -7,7 +7,7 @@ from fontTools.ttLib import TTFont
 
 if sys.getdefaultencoding() != 'gbk': 
  reload(sys) 
-sys.setdefaultencoding('gbk')
+sys.setdefaultencoding('utf-8')
 
 class MaoYan(object):
     def __init__(self):
